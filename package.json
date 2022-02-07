@@ -1,0 +1,23 @@
+{
+  "name": "vue-next-i18n",
+  "version": "1.0.0",
+  "description": "A lightweight internationalization plugin based on vue-next",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aaronlamz/vue-next-i18n.git"
+  },
+  "keywords": [
+    "vue-next",
+    "i18n"
+  ],
+  "author": "aaronlam",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Aaronlamz/vue-next-i18n/issues"
+  },
+  "homepage": "https://github.com/Aaronlamz/vue-next-i18n#readme"
+}
