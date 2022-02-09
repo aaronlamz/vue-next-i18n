@@ -19,7 +19,7 @@ export function createI18n(options?: I18nOptions): I18nInstance {
 
     return {
         currentLocale: readonly(currentLocale),
-        t(key: string, args?: any): string {
+        t(key: string, ...args: any): string {
             if (!key) return ''
             const locale = currentLocale.value
 

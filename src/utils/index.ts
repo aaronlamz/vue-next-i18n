@@ -32,24 +32,15 @@ export function getMessage(
     path: string
 ): any {
     if (!isObj(messageObject)) return ''
-    const paths = parsePath(path)
-    if (paths.length === 0) {
+    const keys = path.split('.')
+    if (keys.length === 0) {
         return ''
     }
     let rawObject = Object.assign({}, messageObject)
-    for (let i = 0; i < paths.length; i++) {
-        if (typeof rawObject[paths[i]] === 'string') {
-            return rawObject[paths[i]] as string
-        }
-        rawObject = rawObject[paths[i]] as LocaleMessageObject
-        if (rawObject === undefined || rawObject === null) {
-            if (i !== paths.length - 1) {
-                return ''
-            }
-            break
-        }
-    }
-    return ''
+    keys.forEach(key => {
+        rawObject = isDef(rawObject[key]) ? rawObject[key] : ''
+    })
+    return rawObject
 }
 
 export function mergeDeep(

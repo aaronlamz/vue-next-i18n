@@ -3,17 +3,17 @@ import App from './App.vue'
 import { createI18n } from '../../../src'
 
 const i18n = createI18n({
-    locale: 'en',
+    locale: 'zhCHS',
     messages: {
         en: {
             button: {
                 add: 'Add new'
-            }
+            },
         },
         zhCHS: {
             button: {
                 add: '新增'
-            }
+            },
         }
     }
 })

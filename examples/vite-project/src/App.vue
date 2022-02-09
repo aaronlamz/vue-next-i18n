@@ -3,7 +3,8 @@
   <h2>Current Lang :</h2>
   <h2>Test Cases:</h2>
   <p>Key[button.add]: {{ $t('button.add') }}</p>
-  <p>Key[function.tips]: {{ $t('function.tips', 'val') }}</p>
+  <p>Key[params]: {{ $t('params', 'value') }}</p>
+  <p>Key Array: {{ $t(['简体', '繁体', '英文']) }}</p>
   <button>Change Lang</button>
 </template>
 <script  lang="ts">
@@ -11,15 +12,15 @@ export default {
   i18n: {
     en: {
       button: {
-        add: 'i18nOption Add new',
-        'function.tips': (val: string) => `new ${val}`
-      }
+        add: 'i18nOption Add new'
+      },
+      params: (val: string) => `params: ${val}`
     },
     zhCHS: {
       button: {
-        add: 'i18n选项 新增',
-        'function.tips': (val: string) => `new ${val}`
-      }
+        add: 'i18n选项 新增'
+      },
+      params: (val: string) => `i18n选项 参数: ${val}`
     }
   }
 }
