@@ -48,6 +48,12 @@ export function createI18n(options?: I18nOptions): I18nInstance {
         install(app: App) {
             const context = this
             app.config.globalProperties.$t = context.t
+            app.mixin({
+                beforeCreate() {
+                    context.$options.i18n &&
+                        context.addLocales(this.$options.i18n)
+                }
+            })
         }
     }
 }
