@@ -36,7 +36,7 @@ export function getMessage(
     if (keys.length === 0) {
         return ''
     }
-    let rawObject = Object.assign({}, messageObject)
+    let rawObject = Object.assign({}, messageObject) as any
     keys.forEach(key => {
         rawObject = isDef(rawObject[key]) ? rawObject[key] : ''
     })
