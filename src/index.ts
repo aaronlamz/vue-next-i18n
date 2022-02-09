@@ -3,7 +3,7 @@ import { I18nOptions, I18nInstance, Locales } from './types'
 import { getMessage, mergeDeep } from './utils'
 
 export function createI18n(options?: I18nOptions): I18nInstance {
-    const initOptions = Object.asigin(
+    const initOptions = Object.assign(
         {
             locale: 'en',
             messages: {},
@@ -12,19 +12,18 @@ export function createI18n(options?: I18nOptions): I18nInstance {
         options
     )
     const currentLocale = ref(initOptions.locale)
-    const locales: Locales = reactive({})
+    let locales: Locales = reactive({})
     Object.entries(initOptions.messages).forEach(([key, messages]) => {
         locales[key] = messages
     })
 
     return {
         currentLocale: readonly(currentLocale),
-        options: readonly(options || {}),
         t(key: string, args?: any): string {
             if (!key) return ''
             const locale = currentLocale.value
 
-            let message = ''
+            let message: any
             if (Array.isArray(key)) {
                 const messages = key
                 const index = initOptions.localeKeys.findIndex(
@@ -35,7 +34,7 @@ export function createI18n(options?: I18nOptions): I18nInstance {
                 message = getMessage(locales[locale], key)
             }
             if (typeof message === 'function') {
-                message = message(...args)
+                return message(...args) || key
             }
             return message || key
         },
@@ -46,12 +45,11 @@ export function createI18n(options?: I18nOptions): I18nInstance {
             locales = mergeDeep(toRaw(locales) || {}, messages)
         },
         install(app: App) {
-            const context = this
-            app.config.globalProperties.$t = context.t
+            const ctx = this
+            app.config.globalProperties.$t = ctx.t
             app.mixin({
                 beforeCreate() {
-                    context.$options.i18n &&
-                        context.addLocales(this.$options.i18n)
+                    this.$options.i18n && ctx.addLocales(this.$options.i18n)
                 }
             })
         }

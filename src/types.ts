@@ -1,12 +1,12 @@
 import { App, Ref } from 'vue'
-import { UnwrapNestedRefs } from '@vue/reactivity'
+import { UnwrapNestedRefs, DeepReadonly } from '@vue/reactivity'
 
 export type I18nOptions = {
     locale?: string
     messages?: {
         [locale: string]: LocaleMessages
     }
-    localeKeys?: Array<string>
+    localeKeys?: string[]
 }
 
 export type LocaleMessage = string
@@ -24,10 +24,9 @@ export type Locales = UnwrapNestedRefs<{
 }>
 
 export type I18nInstance = {
-    currentLocale: UnwrapNestedRefs<Ref<string>>
-    options: UnwrapNestedRefs<I18nOptions>
+    currentLocale: DeepReadonly<UnwrapNestedRefs<Ref<string>>>
     changeLocale(locale: string): void
     addLocales(messages: Locales): void
-    t(key: string, options?: unknown): string
+    t(key: string, options?: any): string
     install(app: App): void
 }
