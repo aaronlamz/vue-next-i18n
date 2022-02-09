@@ -3,3 +3,4 @@ dist
 ./jest.e2e.config.js
 ./api-extractor.json
 ./types
+./examples
