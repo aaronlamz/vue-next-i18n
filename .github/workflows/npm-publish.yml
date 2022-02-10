@@ -25,15 +25,16 @@ jobs:
         cache: 'npm'
     - name: npm run build
       run: |
+        git status 
+        git pull
         npm install
         npm run build
     - name: npm publish
       run: |
-        git status
-        git pull
         git config --local user.email "qylinxia@qq.com"
         git config --local user.name "Aaronlamz"
         npm config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN
+        npm --no-git-tag-version
         npm version patch && git push --follow-tags && npm publish
       env:
         CI: true
