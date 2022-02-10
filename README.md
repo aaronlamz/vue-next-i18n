@@ -1,2 +1,2 @@
 # vue-next-i18n
-A lightweight internationalization plugin based on vue-next
+Lightweight internationalization plugin for Vue 3
