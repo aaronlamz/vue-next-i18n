@@ -25,8 +25,6 @@ jobs:
         cache: 'npm'
     - name: npm run build
       run: |
-        git status 
-        git pull
         npm install
         npm run build
     - name: npm publish
