@@ -1,23 +1,26 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import { createI18n } from '../../../src'
+import { createI18n } from '../../../dist/vue-next-i18n.esm-browser.js'
 
 const i18n = createI18n({
     locale: 'zhCHS',
     messages: {
         en: {
+            fromMapTips:'fromMapTips',
             global:'global option',
             button: {
                 add: 'Add new'
             },
         },
         zhCHS: {
+            fromMapTips:'fromMapTips提示',
             global:'全局 选项',
             button: {
                 add: '新增'
             },
         },
          zhCHT: {
+            fromMapTips:'fromMapTips提示',
             global:'繁体 全局 选项',
             button: {
                 add: '繁体 新增'

@@ -6,6 +6,7 @@
   <p>Key[params]： {{ $t('params', 'function value') }}</p>
   <p>Key Array： {{ $t(['简体', '繁体', '英文']) }}</p>
   <p>Key [global option]： {{ $t('global') }}</p>
+  <p>Key [fromMapTips]: {{ tips[0] }}</p>
   <p>
     <button @click="swtchLang('en')">Change Lang to en</button>
   </p>
@@ -15,7 +16,9 @@
   <button @click="swtchLang('zhCHT')">Change Lang to zhCHT</button>
 </template>
 <script  lang="ts">
-import { useI18n } from '../../../src'
+import { useI18n } from '../../../dist/vue-next-i18n.esm-browser.js'
+import { fromMapTips } from './map'
+import { ref } from 'vue'
 export default {
   i18n: {
     en: {
@@ -43,8 +46,11 @@ export default {
     const swtchLang = (locale: string) => {
       changeLocale(locale)
     }
+    console.log(fromMapTips)
+    let tips = ref(fromMapTips)
     return {
       currentLocale,
+      tips,
       swtchLang
     }
   }

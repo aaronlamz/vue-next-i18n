@@ -3,6 +3,10 @@ import { I18nOptions, I18nInstance, Locales } from './types'
 import { getMessage, mergeDeep } from './utils'
 import { I18nInjectionKey } from './injectionSymbol'
 
+let $t: any
+let locales: Locales = reactive({})
+const currentLocale = ref('')
+
 export function createI18n(options?: I18nOptions): I18nInstance {
     const initOptions = Object.assign(
         {
@@ -12,8 +16,7 @@ export function createI18n(options?: I18nOptions): I18nInstance {
         },
         options
     )
-    const currentLocale = ref(initOptions.locale)
-    let locales: Locales = reactive({})
+    currentLocale.value = initOptions.locale
     Object.entries(initOptions.messages).forEach(([key, messages]) => {
         locales[key] = messages
     })
@@ -23,7 +26,6 @@ export function createI18n(options?: I18nOptions): I18nInstance {
         t(key: string, ...args: any): string {
             if (!key) return ''
             const locale = currentLocale.value
-
             let message: any
             if (Array.isArray(key)) {
                 const messages = key
@@ -48,6 +50,7 @@ export function createI18n(options?: I18nOptions): I18nInstance {
         install(app: App) {
             const ctx = this
             app.config.globalProperties.$t = ctx.t
+            $t = ctx.t
             app.mixin({
                 beforeCreate() {
                     this.$options.i18n && ctx.addLocales(this.$options.i18n)
@@ -57,6 +60,6 @@ export function createI18n(options?: I18nOptions): I18nInstance {
         }
     }
 }
-
 export * from './useApi'
 export * from './types'
+export { $t }

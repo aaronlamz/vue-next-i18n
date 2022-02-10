@@ -6,6 +6,8 @@
   "scripts": {
     "serve": "cd examples/vite-project && yarn && yarn dev",
     "build": "rollup -c rollup.config.js",
+    "build:dts": "api-extractor run --local --verbose && tail -n +2 src/types.ts >> dist/vue-next-i18n.d.ts",
+    "release": "yarn build && yarn build:dts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -29,6 +31,7 @@
   },
   "homepage": "https://github.com/Aaronlamz/vue-next-i18n#readme",
   "devDependencies": {
+    "@microsoft/api-extractor": "^7.19.4",
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-node-resolve": "^13.1.3",
     "@rollup/plugin-replace": "^3.0.1",
