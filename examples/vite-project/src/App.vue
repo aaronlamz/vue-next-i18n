@@ -1,10 +1,10 @@
 
 <template>
   <h2>Current Lang :</h2>
-  <h2>Test Cases:</h2>
-  <p>Key[button.add]: {{ $t('button.add') }}</p>
-  <p>Key[params]: {{ $t('params', 'value') }}</p>
-  <p>Key Array: {{ $t(['简体', '繁体', '英文']) }}</p>
+  <h2>Test Cases：</h2>
+  <p>Key[button.add： {{ $t('button.add') }}</p>
+  <p>Key[params]： {{ $t('params', 'value') }}</p>
+  <p>Key Array： {{ $t(['简体', '繁体', '英文']) }}</p>
   <button>Change Lang</button>
 </template>
 <script  lang="ts">
