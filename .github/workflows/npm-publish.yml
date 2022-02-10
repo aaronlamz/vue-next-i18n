@@ -29,6 +29,8 @@ jobs:
         npm run build
     - name: npm publish
       run: |
+        git status
+        git pull
         git config --local user.email "qylinxia@qq.com"
         git config --local user.name "Aaronlamz"
         npm config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN
