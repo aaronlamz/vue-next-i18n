@@ -1,6 +1,6 @@
 {
   "name": "vue-next-i18n",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A lightweight internationalization plugin based on vue-next",
   "main": "dist/vue-next-i18n.cjs.js",
   "scripts": {
