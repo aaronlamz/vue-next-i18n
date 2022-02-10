@@ -1,6 +1,7 @@
 import { App, ref, reactive, readonly, toRaw } from 'vue'
 import { I18nOptions, I18nInstance, Locales } from './types'
 import { getMessage, mergeDeep } from './utils'
+import { I18nInjectionKey } from './injectionSymbol'
 
 export function createI18n(options?: I18nOptions): I18nInstance {
     const initOptions = Object.assign(
@@ -52,6 +53,10 @@ export function createI18n(options?: I18nOptions): I18nInstance {
                     this.$options.i18n && ctx.addLocales(this.$options.i18n)
                 }
             })
+            app.provide(I18nInjectionKey, ctx)
         }
     }
 }
+
+export * from './useApi'
+export * from './types'
