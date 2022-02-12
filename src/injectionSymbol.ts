@@ -8,4 +8,4 @@ export const makeSymbol = (name: string): symbol | string =>
     hasSymbol ? Symbol(name) : name
 
 export const I18nInjectionKey: InjectionKey<I18nInstance> | string =
-    /* #__PURE__*/ makeSymbol('i18n')
+    makeSymbol('i18n')
