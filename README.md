@@ -1,10 +1,10 @@
 # 🔥️ vue-next-i18n
 
-## Status: [![build status](https://github.com/Aaronlamz/vue-next-i18n/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/Aaronlamz/vue-next-i18n/actions/workflows/npm-publish.yml)
+## [![build status](https://github.com/Aaronlamz/vue-next-i18n/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/Aaronlamz/vue-next-i18n/actions/workflows/npm-publish.yml)
 
 Lightweight internationalization plugin for Vue 3
 
-## Getting started
+## 🌈 Getting started
 To begin, you'll need to install vue-next-i18n 
 
 ### use npm
@@ -70,7 +70,7 @@ app.mount('#app')
 </div>
 ```
 
-## Composition API
+## 🚌 Composition API
 ```typescript
 import { useI18n } from 'vue-next-i18n'
 
@@ -88,7 +88,7 @@ export default {
 
 ## 📦 Examples
 
-### basic
+### basic example
 ```
 const messages = {
   en: {
@@ -154,19 +154,19 @@ export default {
   i18n:{
     en: {
       message: {
-        hello: (val) =>  `hello world ${val}`
+        hello: 'hello world'
       }
     },
     zhCHS: {
       message: {
-        hello: (val) =>  `你好 世界 ${val}`
+        hello: '你好 世界'
       }
     },
     ja: {
       message: {
-        hello: (val) =>  `こんにちは、世界 ${val}`
+        hello: 'こんにちは、世界'
       }
-    }  
+    } 
   },
   setup(){
     // code...
