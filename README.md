@@ -1,6 +1,10 @@
 # 🔥️ vue-next-i18n
 
-## [![build status](https://github.com/Aaronlamz/vue-next-i18n/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/Aaronlamz/vue-next-i18n/actions/workflows/npm-publish.yml)
+<p align="center">
+<img src="https://github.com/Aaronlamz/vue-next-i18n/actions/workflows/npm-publish.yml/badge.svg">
+<img src="https://img.shields.io/github/license/Aaronlamz/vue-next-i18n">
+<img src="https://img.badgesize.io/https://unpkg.com/vue-next-i18n/dist/vue-next-i18n.cjs.js?compression=gzip&style=flat-square&label=gzip%20size&color=#4fc08d" alt="Gzip Size" />
+</p>
 
 Lightweight internationalization plugin for Vue 3
 
