@@ -30,6 +30,12 @@
     "url": "https://github.com/Aaronlamz/vue-next-i18n/issues"
   },
   "homepage": "https://github.com/Aaronlamz/vue-next-i18n#readme",
+  "files": [
+    "dist/*.js",
+    "dist/vue-next-i18n.d.ts",
+    "README.md"
+  ],
+  "types": "dist/vue-next-i18n.d.ts",
   "devDependencies": {
     "@microsoft/api-extractor": "^7.19.4",
     "@rollup/plugin-commonjs": "^21.0.1",
