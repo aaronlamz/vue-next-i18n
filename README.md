@@ -73,12 +73,14 @@ app.mount('#app')
   <p>{{ $t("message.hello") }}</p>
 </div>
 
+
+```
+```
 <!-- Output the following: -->
 <div id="#app">
   <p>你好 世界</p>
 </div>
 ```
-
 ## 🚌 Composition API
 ```typescript
 import { useI18n } from 'vue-next-i18n'
