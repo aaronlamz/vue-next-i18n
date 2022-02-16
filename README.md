@@ -72,6 +72,11 @@ app.mount('#app')
 <div id="app">
   <p>{{ $t("message.hello") }}</p>
 </div>
+
+<!-- Output the following: -->
+<div id="#app">
+  <p>你好 世界</p>
+</div>
 ```
 
 ## 🚌 Composition API
