@@ -92,7 +92,7 @@ export default {
 
 ## 📦 Examples
 
-### basic example
+### basic
 ```
 const messages = {
   en: {
