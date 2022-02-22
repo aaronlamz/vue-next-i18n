@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import { createI18n } from '../../../dist/vue-next-i18n.esm-browser.js'
+import { createI18n } from '../../../src/index'
 
 const i18n = createI18n({
     locale: 'zhCHS',

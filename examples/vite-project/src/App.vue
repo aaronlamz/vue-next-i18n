@@ -16,7 +16,7 @@
   <button @click="swtchLang('zhCHT')">Change Lang to zhCHT</button>
 </template>
 <script  lang="ts">
-import { useI18n } from '../../../dist/vue-next-i18n.esm-browser.js'
+import { useI18n } from '../../../src/index'
 import { fromMapTips } from './map'
 import { ref } from 'vue'
 export default {

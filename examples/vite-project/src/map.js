@@ -1,4 +1,4 @@
-import {$t} from '../../../dist/vue-next-i18n.esm-browser.js'
+import {$t} from '../../../src/index'
 setTimeout(()=>{
     console.log($t)
 })
