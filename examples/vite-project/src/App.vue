@@ -1,6 +1,7 @@
 
 <template>
   <h2>Current Lang : {{ currentLocale }}</h2>
+  <h2>Current Lang from $i18n.currentLocale: {{ currentLocale }}</h2>
   <h2>Test Cases：</h2>
   <p>Key[button.add： {{ $t('button.add') }}</p>
   <p>Key[params]： {{ $t('params', 'function value') }}</p>
@@ -13,6 +14,21 @@
     <button @click="swtchLang('zhCHS')">Change Lang to zhCHS</button>
   </p>
   <button @click="swtchLang('zhCHT')">Change Lang to zhCHT</button>
+  <p>
+    <button @click="changLang('zhCHT')">
+      Change Lang to zhCHT by $i18n.changeLocale
+    </button>
+  </p>
+  <p>
+    <button @click="changLang('zhCHS')">
+      Change Lang to zhCHS by $i18n.changeLocale
+    </button>
+  </p>
+  <p>
+    <button @click="changLang('en')">
+      Change Lang to en by $i18n.changeLocale
+    </button>
+  </p>
 </template>
 <script  lang="ts">
 import { useI18n } from '../../../src/index'
@@ -37,6 +53,11 @@ export default {
         add: 'i18n选项 新增繁体'
       },
       params: (val: string) => `繁体 i18n选项 参数: ${val}`
+    }
+  },
+  methods: {
+    changLang(locale: string) {
+      ;(this as any).$i18n.changeLocale(locale)
     }
   },
   setup() {

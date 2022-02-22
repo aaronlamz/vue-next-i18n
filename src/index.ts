@@ -49,6 +49,7 @@ export function createI18n(options?: I18nOptions): I18nInstance {
         },
         install(app: App) {
             const ctx = this
+            app.config.globalProperties.$i18n = ctx
             app.config.globalProperties.$t = ctx.t
             $t = ctx.t
             app.mixin({
