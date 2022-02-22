@@ -6,7 +6,6 @@
   <p>Key[params]： {{ $t('params', 'function value') }}</p>
   <p>Key Array： {{ $t(['简体', '繁体', '英文']) }}</p>
   <p>Key [global option]： {{ $t('global') }}</p>
-  <p>Key [fromMapTips]: {{ tips[0] }}</p>
   <p>
     <button @click="swtchLang('en')">Change Lang to en</button>
   </p>
