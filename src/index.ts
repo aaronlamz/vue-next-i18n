@@ -1,10 +1,10 @@
-import { App, ref, reactive, readonly, toRaw } from 'vue'
+import { App, ref, readonly, toRaw } from 'vue'
 import { I18nOptions, I18nInstance, Locales } from './types'
 import { getMessage, mergeDeep } from './utils'
 import { I18nInjectionKey } from './injectionSymbol'
 
 let $t: any
-let locales: Locales = reactive({})
+let locales: Locales = {}
 const currentLocale = ref('')
 
 export function createI18n(options?: I18nOptions): I18nInstance {
@@ -17,10 +17,7 @@ export function createI18n(options?: I18nOptions): I18nInstance {
         options
     )
     currentLocale.value = initOptions.locale
-    Object.entries(initOptions.messages).forEach(([key, messages]) => {
-        locales[key] = messages
-    })
-
+    locales = initOptions.messages
     return {
         currentLocale: readonly(currentLocale),
         t(key: string, ...args: any): string {
