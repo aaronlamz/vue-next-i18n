@@ -193,7 +193,6 @@ export default {
 Details changes for each release are documented in the [CHANGELOG.md](./CHANGELOG.md).
 
 ## TODO
-* testcases
 * documents
 
 ## 📄 License
