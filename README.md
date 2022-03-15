@@ -49,7 +49,7 @@ import { createI18n } from 'vue-next-i18n';
 const i18n = createI18n({
   locale: 'zhCHS', // set locale, depend on messages object structure keys
   messages, // set locale messages
-  localeKeys:['zhCHS','zhCHT','en'] //Not required default： ['zhCHS','zhCHT','en']
+  localeKeys:['zhCHS','zhCHT','en'] //Not required, default value： ['zhCHS','zhCHT','en']
 })
 
 
