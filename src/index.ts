@@ -1,10 +1,10 @@
-import { App, ref, readonly, toRaw } from 'vue'
+import { App, ref, readonly, toRaw, reactive } from 'vue'
 import { I18nOptions, I18nInstance, Locales } from './types'
 import { getMessage, mergeDeep } from './utils'
 import { I18nInjectionKey } from './injectionSymbol'
 
 let $t: any
-let locales: Locales = {}
+let locales: Locales = reactive({})
 const currentLocale = ref('')
 
 export function createI18n(options?: I18nOptions): I18nInstance {
