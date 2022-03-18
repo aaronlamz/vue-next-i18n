@@ -1,6 +1,5 @@
 import path from 'path'
 import ts from 'rollup-plugin-typescript2'
-import replace from '@rollup/plugin-replace'
 import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 
@@ -63,11 +62,7 @@ function createConfig(format, output, plugins = []) {
         vue: 'Vue'
     }
 
-    const isProductionBuild = /\.prod\.js$/.test(output.file)
     const isGlobalBuild = format === 'global'
-    const isRawESMBuild = format === 'esm'
-    const isNodeBuild = format === 'cjs'
-    const isBundlerESMBuild = /esm-bundler/.test(format)
 
     if (isGlobalBuild) {
         output.name = 'VueNextI18n'
@@ -102,57 +97,9 @@ function createConfig(format, output, plugins = []) {
         // Global and Browser ESM builds inlines everything so that they can be
         // used alone.
         external,
-        plugins: [
-            tsPlugin,
-            createReplacePlugin(
-                isProductionBuild,
-                isBundlerESMBuild,
-                isGlobalBuild || isRawESMBuild || isBundlerESMBuild,
-                isGlobalBuild,
-                isNodeBuild
-            ),
-            ...nodePlugins,
-            ...plugins
-        ],
+        plugins: [tsPlugin, ...nodePlugins, ...plugins],
         output
     }
-}
-
-function createReplacePlugin(
-    isProduction,
-    isBundlerESMBuild,
-    isBrowserBuild,
-    isGlobalBuild,
-    isNodeBuild
-) {
-    const replacements = {
-        __COMMIT__: `"${process.env.COMMIT}"`,
-        __VERSION__: `"${pkg.version}"`,
-        __DEV__: isBundlerESMBuild
-            ? // preserve to be handled by bundlers
-              `(process.env.NODE_ENV !== 'production')`
-            : // hard coded dev/prod builds
-              !isProduction,
-        // this is only used during tests
-        __TEST__: isBundlerESMBuild
-            ? `(process.env.NODE_ENV === 'test')`
-            : false,
-        // If the build is expected to run directly in the browser (global / esm builds)
-        __BROWSER__: isBrowserBuild,
-        __FEATURE_PROD_DEVTOOLS__: isBundlerESMBuild
-            ? `__VUE_PROD_DEVTOOLS__`
-            : false,
-        __BUNDLER__: isBundlerESMBuild,
-        __GLOBAL__: isGlobalBuild,
-        __NODE_JS__: isNodeBuild
-    }
-
-    Object.keys(replacements).forEach(key => {
-        if (key in process.env) {
-            replacements[key] = process.env[key]
-        }
-    })
-    return replace(replacements)
 }
 
 function createProductionConfig(format) {
