@@ -5,24 +5,22 @@
 <img src="https://img.shields.io/github/license/Aaronlamz/vue-next-i18n">
 <img src="https://img.badgesize.io/https://unpkg.com/vue-next-i18n/dist/vue-next-i18n.cjs.js?compression=gzip&style=flat-square&label=gzip%20size&color=#4fc08d" alt="Gzip Size" />
 </p>
-<p>
- <a href="./README.zh-CN.md">🇨🇳 中文文档</a> 
-</p>
-Lightweight internationalization plugin for Vue 3
 
-## 🌈 Getting started
-To begin, you'll need to install vue-next-i18n 
+Vue3轻量版国际化插件
 
-### use npm
+## 🌈 开始
+首先你需要先安装vue-next-i18n 
+
+### 使用 npm
 ```
 npm install vue-next-i18n
 ```
-### use yarn
+### 使用 yarn
 ```
 yarn add vue-next-i18n
 ```
-## 🚀 Usage
-When using with a module system, you must explicitly install the vue-next-i18n via app.use():
+## 🚀 用法
+通过 app.use() 方法注册插件
 ```typescript
 // 1. Ready translated locale messages
 // The structure of the locale message is the hierarchical object structure with each locale as the top property
@@ -44,30 +42,30 @@ const messages = {
   }
 }
 
-// 2. Create i18n instance with options
+// 2. 初始化i18n实例
 import { createApp } from 'vue';
 import { createI18n } from 'vue-next-i18n';
 
 const i18n = createI18n({
-  locale: 'zhCHS', // set locale, depend on messages object structure keys
-  messages, // set locale messages
-  localeKeys:['zhCHS','zhCHT','en'] //Not required, default value： ['zhCHS','zhCHT','en']
+  locale: 'zhCHS', // 设置多语言
+  messages, // 多语言文件
+  localeKeys:['zhCHS','zhCHT','en'] // 用于数组形象获取多语言时的顺序，默认顺序： ['zhCHS','zhCHT','en']
 })
 
 
-// 3. Create a vue root instance
+// 3. 创建Vue根实例
 const app = createApp({
   // set something options
   // ...
 })
 
-// 4. Install i18n instance to make the whole app i18n-aware
+// 4. 注册i18n实例
 app.use(i18n)
 
-// 5. Mount
+// 5. 挂载
 app.mount('#app')
 
-// Now the app has started!
+// OK了
 ```
 ### HTML
 ```
@@ -99,9 +97,9 @@ export default {
 }
 ```
 
-## 📦 Examples
+## 📦 例子
 
-### basic
+### 基础
 ```
 const messages = {
   en: {
@@ -126,7 +124,7 @@ const messages = {
 </div>
 ```
 
-### support function translation
+### 支持传入函数
 ```
 const messages = {
   en: {
@@ -150,7 +148,7 @@ const messages = {
   <p>{{ $t("message.hello",'hahaha') }}</p>
 </div>
 ```
-### use array messages
+### 使用数组形式
 The array order depends on the localeKeys, default value is ['zhCHS','zhCHT','en']
 
 ```
@@ -161,7 +159,7 @@ The array order depends on the localeKeys, default value is ['zhCHS','zhCHT','en
 </div>
 ```
 
-### use i18n option in component
+### 支持组件内i18n选项多语言配置
 ```
 export default {
   i18n:{
@@ -194,8 +192,6 @@ export default {
 ## 📜 Changelog
 Details changes for each release are documented in the [CHANGELOG.md](./CHANGELOG.md).
 
-## TODO
-* documents
 ## 📄 License
 MIT License © 2022 [Aaron Lam](https://github.com/Aaronlamz)
 
