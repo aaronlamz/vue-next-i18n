@@ -9,7 +9,7 @@
 Vue3轻量版国际化插件
 
 ## 🌈 开始
-需要先安装vue-next-i18n 
+安装vue-next-i18n 
 
 ### 使用 npm
 ```
@@ -189,7 +189,7 @@ export default {
 </div>
 ```
 
-## 📜 Changelog
+## 📜 变更日志
 Details changes for each release are documented in the [CHANGELOG.md](./CHANGELOG.md).
 
 ## 📄 License
