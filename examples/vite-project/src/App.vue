@@ -4,7 +4,7 @@
   <h2>Current Lang from $i18n.currentLocale: {{ currentLocale }}</h2>
   <h2>Test Cases：</h2>
   <p>Key[button.add： {{ $t('button.add') }}</p>
-  <p>Key[params]： {{ $t('params', 'function value') }}</p>
+  <p>Key[params]： {{ $t('params', param) }}</p>
   <p>Key Array： {{ $t(['简体', '繁体', '英文']) }}</p>
   <p>Key [global option]： {{ $t('global') }}</p>
   <p>
@@ -28,6 +28,19 @@
     <button @click="changLang('en')">
       Change Lang to en by $i18n.changeLocale
     </button>
+  </p>
+  <p>
+    <button @click="changeFunctionParams('zhCHS')">
+      Change param to zhCHS
+    </button>
+  </p>
+  <p>
+    <button @click="changeFunctionParams('zhCHT')">
+      Change param to zhCHT
+    </button>
+  </p>
+  <p>
+    <button @click="changeFunctionParams('en')">Change param to en</button>
   </p>
 </template>
 <script  lang="ts">
@@ -58,9 +71,13 @@ export default {
   methods: {
     changLang(locale: string) {
       ;(this as any).$i18n.changeLocale(locale)
+    },
+    changeFunctionParams(param: string) {
+      ;(this as any).param = param
     }
   },
   setup() {
+    let param = ref('zhCHS')
     const i18n = useI18n()
     const { changeLocale, currentLocale } = i18n
     const swtchLang = (locale: string) => {
@@ -69,6 +86,7 @@ export default {
     console.log(fromMapTips)
     let tips = ref(fromMapTips)
     return {
+      param,
       currentLocale,
       tips,
       swtchLang

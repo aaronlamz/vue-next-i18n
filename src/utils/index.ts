@@ -48,7 +48,8 @@ export function mergeDeep(
     source: Record<string, any>
 ): Record<string, any> {
     Object.keys(source).forEach(key => {
-        if (source[key] instanceof Object && key in target) {
+        // merging the same key on both objects
+        if (typeof source[key] === 'object' &&  source[key] instanceof Object && key in target) {
             source[key] = {
                 ...source[key],
                 ...mergeDeep(target[key], source[key])
