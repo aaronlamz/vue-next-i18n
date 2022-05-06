@@ -68,14 +68,6 @@ export default {
       params: (val: string) => `繁体 i18n选项 参数: ${val}`
     }
   },
-  methods: {
-    changLang(locale: string) {
-      ;(this as any).$i18n.changeLocale(locale)
-    },
-    changeFunctionParams(param: string) {
-      ;(this as any).param = param
-    }
-  },
   setup() {
     let param = ref('zhCHS')
     const i18n = useI18n()
@@ -90,6 +82,14 @@ export default {
       currentLocale,
       tips,
       swtchLang
+    }
+  },
+  methods: {
+    changLang(locale: string) {
+      ;(this as any).$i18n.changeLocale(locale)
+    },
+    changeFunctionParams(param: string) {
+      ;(this as any).param = param
     }
   }
 }
