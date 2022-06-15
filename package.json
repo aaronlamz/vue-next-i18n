@@ -24,7 +24,7 @@
   ],
   "author": {
     "name": "Aaron Lam",
-    "email": "qylinxia@qq.com"
+    "email": "linjiajun2015@gmail.com"
   },
   "license": "MIT",
   "bugs": {
@@ -49,11 +49,13 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^8.4.1",
+    "jest": "^28.1.1",
     "lint-staged": "^12.3.3",
     "prettier": "^2.5.1",
     "rollup": "^2.67.1",
     "rollup-plugin-typescript2": "^0.31.2",
     "standard-version": "^9.3.2",
+    "ts-jest": "^28.0.5",
     "typescript": "^4.5.5",
     "vue": "^3.2.31"
   },
