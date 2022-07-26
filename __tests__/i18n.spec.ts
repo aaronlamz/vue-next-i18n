@@ -21,16 +21,16 @@ const defaultMessages = {
 
 describe('I18n plugin tests', () => {
     describe('Init', () => {
-        it('create plugin', () => {
+        it('create plugin without options', () => {
             const plugin = createI18n()
-            expect(plugin.currentLocale).toEqual('en')
+            expect(plugin.currentLocale.value).toEqual('en')
         })
 
-        it('create plugin with options', () => {
+        it('create plugin with locale option', () => {
             const plugin = createI18n({
                 locale: 'ja'
             })
-            expect(plugin.currentLocale).toEqual('ja')
+            expect(plugin.currentLocale.value).toEqual('ja')
         })
     })
 
