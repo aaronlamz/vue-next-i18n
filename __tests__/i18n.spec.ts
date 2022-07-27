@@ -34,38 +34,30 @@ describe('I18n plugin tests', () => {
         })
     })
 
-    // describe('Plugin', () => {
-    //     let plugin: I18nInstance
-    //     beforeEach(() => {
-    //         plugin = createI18n({
-    //             locale: 'en',
-    //             messages: defaultMessages
-    //         })
-    //     })
+    describe('Plugin', () => {
+        let plugin: I18nInstance
+        beforeEach(() => {
+            plugin = createI18n({
+                locale: 'en',
+                messages: defaultMessages
+            })
+        })
 
-    //     it('message', () => {
-    //         expect(plugin.t('home.general.button')).toEqual('Home')
-    //     })
+        it('message', () => {
+            expect(plugin.t('message.hello')).toEqual('hello world')
+        })
 
-    //     it('extend and override message', () => {
-    //         const messages = {
-    //             en: {
-    //                 home: {
-    //                     general: {
-    //                         button: 'Add to cart',
-    //                         cancel: 'Cancel'
-    //                     }
-    //                 }
-    //             }
-    //         }
+        it('extend and override message', () => {
+            const messages = {
+                en: {
+                    message: {
+                        hello: 'override hello world message'
+                    }
+                }
+            }
 
-    //         plugin.addLocales(messages)
-    //         expect(plugin.t('home.general.button')).toEqual(
-    //             messages.en.home.general.button
-    //         )
-    //         expect(plugin.t('home.general.cancel')).toEqual(
-    //             messages.en.home.general.cancel
-    //         )
-    //     })
-    // })
+            plugin.addLocales(messages)
+            expect(plugin.t('message.hello')).toEqual(messages.en.message.hello)
+        })
+    })
 })
