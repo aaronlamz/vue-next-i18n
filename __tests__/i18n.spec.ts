@@ -20,7 +20,7 @@ const defaultMessages = {
 }
 
 describe('I18n plugin tests', () => {
-    describe('Init', () => {
+    describe('Init Plugin', () => {
         it('create plugin without options', () => {
             const plugin = createI18n()
             expect(plugin.currentLocale.value).toEqual('en')
@@ -34,7 +34,7 @@ describe('I18n plugin tests', () => {
         })
     })
 
-    describe('Plugin', () => {
+    describe('Test plugin message and methods', () => {
         let plugin: I18nInstance
         beforeEach(() => {
             plugin = createI18n({
@@ -55,7 +55,29 @@ describe('I18n plugin tests', () => {
                     }
                 }
             }
+            plugin.addLocales(messages)
+            expect(plugin.t('message.hello')).toEqual(messages.en.message.hello)
+        })
 
+        it('change locale', () => {
+            plugin.changeLocale('zhCHS')
+            expect(plugin.t('message.hello')).toEqual('你好 世界')
+        })
+
+        it('change locale to default', () => {
+            plugin.changeLocale('en')
+            expect(plugin.t('message.hello')).toEqual('hello world')
+        })
+
+        it('change locale to default and extend', () => {
+            plugin.changeLocale('en')
+            const messages = {
+                en: {
+                    message: {
+                        hello: 'override hello world message'
+                    }
+                }
+            }
             plugin.addLocales(messages)
             expect(plugin.t('message.hello')).toEqual(messages.en.message.hello)
         })
