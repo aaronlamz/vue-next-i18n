@@ -39,12 +39,19 @@ describe('I18n plugin tests', () => {
         beforeEach(() => {
             plugin = createI18n({
                 locale: 'en',
+                localeKeys: ['en', 'zhCHT', 'ja'],
                 messages: defaultMessages
             })
         })
 
         it('message', () => {
             expect(plugin.t('message.hello')).toEqual('hello world')
+        })
+
+        it('test localeKeys ', () => {
+            expect(
+                plugin.t(['hello world', '你好 世界', 'こんにちは、世界'])
+            ).toEqual('hello world')
         })
 
         it('extend and override message', () => {
