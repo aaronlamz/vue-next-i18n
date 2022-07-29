@@ -4,17 +4,41 @@ import { I18nInstance } from '../src'
 const defaultMessages = {
     en: {
         message: {
-            hello: 'hello world'
+            hello: 'hello world',
+            param: (val: string) => `hello ${val}`
         }
     },
     zhCHS: {
         message: {
-            hello: '你好 世界'
+            hello: '你好 世界',
+            param: (val: string) => `你好 ${val}`
         }
     },
     ja: {
         message: {
-            hello: 'こんにちは、世界'
+            hello: 'こんにちは、世界',
+            param: (val: string) => `こんにちは ${val}`
+        }
+    }
+}
+
+const otherMessages = {
+    zhCHS: {
+        message: {
+            hello: '你好 世界',
+            param: (val: string) => `你好 ${val}`
+        }
+    },
+    zhCHT: {
+        message: {
+            hello: '你好 世界',
+            param: (val: string) => `你好 ${val}`
+        }
+    },
+    en: {
+        message: {
+            hello: 'hello world',
+            param: (val: string) => `hello ${val}`
         }
     }
 }
@@ -34,6 +58,21 @@ describe('I18n plugin tests', () => {
         })
     })
 
+    describe('Test Plugin Default ', () => {
+        let plugin: I18nInstance
+
+        it('create plugin without options', () => {
+            plugin = createI18n()
+            expect(plugin.currentLocale.value).toEqual('en')
+        })
+
+        it('test localeKeys ', () => {
+            expect(plugin.t(['你好 世界', '你好 世界', 'hello world'])).toEqual(
+                'hello world'
+            )
+        })
+    })
+
     describe('Test plugin message and methods', () => {
         let plugin: I18nInstance
         beforeEach(() => {
@@ -44,8 +83,16 @@ describe('I18n plugin tests', () => {
             })
         })
 
-        it('message', () => {
+        it('test message', () => {
             expect(plugin.t('message.hello')).toEqual('hello world')
+        })
+
+        it('test message function', () => {
+            expect(plugin.t('message.param', 'world')).toEqual('hello world')
+        })
+
+        it('test message without key', () => {
+            expect(plugin.t('')).toEqual('')
         })
 
         it('test localeKeys ', () => {

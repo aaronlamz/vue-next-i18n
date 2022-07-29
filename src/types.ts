@@ -8,8 +8,9 @@ export type I18nOptions = {
     }
     localeKeys?: string[]
 }
+type fn = (key: string) => string
 
-export type LocaleMessage = string
+export type LocaleMessage = string | fn
 
 export type LocaleMessageObject = {
     [key: string]: LocaleMessageObject | LocaleMessage
