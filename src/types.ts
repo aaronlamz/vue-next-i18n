@@ -10,7 +10,7 @@ export type I18nOptions = {
 }
 type fn = (key: string) => string
 
-export type LocaleMessage = string | fn
+export type LocaleMessage = string | number | fn
 
 export type LocaleMessageObject = {
     [key: string]: LocaleMessageObject | LocaleMessage
