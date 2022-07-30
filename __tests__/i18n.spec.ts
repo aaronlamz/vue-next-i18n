@@ -67,9 +67,21 @@ describe('I18n plugin tests', () => {
         })
 
         it('test localeKeys ', () => {
-            expect(plugin.t(['你好 世界', '你好 世界', 'hello world'])).toEqual(
-                'hello world'
-            )
+            expect(
+                plugin.t(['你好 世界', '你好 世界繁体', 'hello world'])
+            ).toEqual('hello world')
+            plugin.changeLocale('zhCHS')
+            expect(
+                plugin.t(['你好 世界', '你好 世界繁体', 'hello world'])
+            ).toEqual('你好 世界')
+            plugin.changeLocale('zhCHT')
+            expect(
+                plugin.t(['你好 世界', '你好 世界繁体', 'hello world'])
+            ).toEqual('你好 世界繁体')
+            plugin.changeLocale('en')
+            expect(
+                plugin.t(['你好 世界', '你好 世界繁体', 'hello world'])
+            ).toEqual('hello world')
         })
     })
 
@@ -97,7 +109,7 @@ describe('I18n plugin tests', () => {
 
         it('test localeKeys ', () => {
             expect(
-                plugin.t(['hello world', '你好 世界', 'こんにちは、世界'])
+                plugin.t(['hello world', '你好 世界繁体', 'こんにちは、世界'])
             ).toEqual('hello world')
         })
 
