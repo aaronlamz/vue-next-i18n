@@ -10,5 +10,19 @@ module.exports = {
     coveragePathIgnorePatterns: ['/node_modules/', 'src/index.ts'],
     testMatch: ['<rootDir>/__tests__/**/*.spec.ts?(x)'],
     watchPathIgnorePatterns: ['<rootDir>/node_modules'],
-    testEnvironment: 'jsdom'
+    testEnvironment: 'jsdom',
+    transform: {
+        '^.+\\.vue$': 'vue-jest',
+        '^.+\\js$': 'babel-jest'
+    },
+    moduleFileExtensions: [
+        'vue',
+        'js',
+        'json',
+        'jsx',
+        'ts',
+        'tsx',
+        'node',
+        'node-addons'
+    ]
 }
