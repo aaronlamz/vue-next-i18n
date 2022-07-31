@@ -22,27 +22,6 @@ const defaultMessages = {
     }
 }
 
-// const otherMessages = {
-//     zhCHS: {
-//         message: {
-//             hello: '你好 世界',
-//             param: (val: string) => `你好 ${val}`
-//         }
-//     },
-//     zhCHT: {
-//         message: {
-//             hello: '你好 世界',
-//             param: (val: string) => `你好 ${val}`
-//         }
-//     },
-//     en: {
-//         message: {
-//             hello: 'hello world',
-//             param: (val: string) => `hello ${val}`
-//         }
-//     }
-// }
-
 describe('I18n plugin tests', () => {
     describe('Init Plugin', () => {
         it('create plugin without options', () => {
