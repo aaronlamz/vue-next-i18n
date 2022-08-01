@@ -10,14 +10,15 @@ module.exports = {
         'src/**/*.ts',
         '!src/useApi.ts',
         '!src/index.ts',
-        '!src/injectionSymbol.ts'
+        '!src/injectionSymbol.ts',
+        '!src/shims-vue.d.ts'
     ],
     coveragePathIgnorePatterns: [
         '/node_modules/',
         'src/index.ts',
         'src/useApi.ts',
         'src/global.d.ts',
-        'src/shield.d.ts'
+        'src/shims-vue.d.ts'
     ],
     testMatch: ['<rootDir>/__tests__/**/*.spec.ts?(x)'],
     watchPathIgnorePatterns: ['<rootDir>/node_modules'],
