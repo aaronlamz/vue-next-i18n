@@ -6,8 +6,17 @@ module.exports = {
     },
     coverageDirectory: 'coverage',
     coverageReporters: ['html', 'lcov', 'text'],
-    collectCoverageFrom: ['src/**/*.ts', '!src/useApi.ts'],
-    coveragePathIgnorePatterns: ['/node_modules/', 'src/index.ts'],
+    collectCoverageFrom: [
+        'src/**/*.ts',
+        '!src/useApi.ts',
+        '!src/index.ts',
+        '!src/injectionSymbol.ts'
+    ],
+    coveragePathIgnorePatterns: [
+        '/node_modules/',
+        'src/index.ts',
+        'src/useApi.ts'
+    ],
     testMatch: ['<rootDir>/__tests__/**/*.spec.ts?(x)'],
     watchPathIgnorePatterns: ['<rootDir>/node_modules'],
     testEnvironment: 'jsdom',
