@@ -7,9 +7,10 @@
 <img src="https://packagephobia.com/badge?p=vue-next-i18n@1.0.10" />
 <img alt="coverage" src="https://github.com/aaronlamz/vue-next-i18n/actions/workflows/test.yml/badge.svg">
 <img alt="Codecov" src="https://img.shields.io/codecov/c/github/aaronlamz/vue-next-i18n">
-
-
+<img alt="download" src="https://img.shields.io/npm/dm/vue-next-i18n">
+<img alt="npm" src="https://img.shields.io/npm/v/vue-next-i18n">
 </p>
+
 <p>
  <a href="./README.zh-CN.md">🇨🇳 中文文档</a> 
 </p>
