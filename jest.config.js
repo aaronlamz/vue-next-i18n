@@ -15,7 +15,6 @@ module.exports = {
     ],
     coveragePathIgnorePatterns: [
         '/node_modules/',
-        'src/index.ts',
         'src/useApi.ts',
         'src/global.d.ts',
         'src/shims-vue.d.ts'
