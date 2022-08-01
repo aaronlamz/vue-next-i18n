@@ -15,7 +15,9 @@ module.exports = {
     coveragePathIgnorePatterns: [
         '/node_modules/',
         'src/index.ts',
-        'src/useApi.ts'
+        'src/useApi.ts',
+        'src/global.d.ts',
+        'src/shield.d.ts'
     ],
     testMatch: ['<rootDir>/__tests__/**/*.spec.ts?(x)'],
     watchPathIgnorePatterns: ['<rootDir>/node_modules'],
