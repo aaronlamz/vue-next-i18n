@@ -198,6 +198,6 @@ export default {
 Details changes for each release are documented in the [CHANGELOG.md](./CHANGELOG.md).
 
 ## 📄 License
-MIT License © 2022 [Aaron Lam](https://github.com/Aaronlamz)
+MIT License © 2022 [Aaron Lam](https://github.com/aaronlamz)
 
 
