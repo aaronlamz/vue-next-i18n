@@ -28,6 +28,6 @@ export type I18nInstance = {
     currentLocale: UnwrapNestedRefs<Ref<string>>
     changeLocale(locale: string): void
     addLocales(messages: Locales): void
-    t(key: string | string[], options?: any): string
+    t(key: string | string[], ...args: any[]): string
     install(app: App): void
 }
