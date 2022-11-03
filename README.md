@@ -103,7 +103,7 @@ export default {
 }
 ```
 
-## 📦 Examples
+## 📦 API Examples
 
 ### basic
 ```
