@@ -58,21 +58,21 @@ export default {
         add: 'i18nOption Add new'
       },
       params: (val: string) => `en i18n Option params: ${val}`,
-      'support $n': 'support $params: $1, $2, $3, $4'
+      'support $n': 'support $params: $1, $2, $3, $4,$5'
     },
     zhCHS: {
       button: {
         add: 'i18n选项 新增'
       },
       params: (val: string) => `简体 i18n选项 参数: ${val}`,
-      'support $n': '支持参数 $params: $1, $2, $3, $4'
+      'support $n': '支持参数 $params: $1, $2, $3, $4,$5'
     },
     zhCHT: {
       button: {
         add: 'i18n选项 新增繁体'
       },
       params: (val: string) => `繁体 i18n选项 参数: ${val}`,
-      'support $n': '支持參數 $params: $1, $2, $3, $4'
+      'support $n': '支持參數 $params: $1, $2, $3, $4,$5'
     }
   },
   setup() {
