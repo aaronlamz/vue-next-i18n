@@ -5,19 +5,22 @@ const defaultMessages = {
     en: {
         message: {
             hello: 'hello world',
-            param: (val: string) => `hello ${val}`
+            param: (val: string) => `hello ${val}`,
+            $n: 'replacement params: $1,$2'
         }
     },
     zhCHS: {
         message: {
             hello: '你好 世界',
-            param: (val: string) => `你好 ${val}`
+            param: (val: string) => `你好 ${val}`,
+            $n: '替换参数: $1,$2'
         }
     },
     ja: {
         message: {
             hello: 'こんにちは、世界',
-            param: (val: string) => `こんにちは ${val}`
+            param: (val: string) => `こんにちは ${val}`,
+            $n: 'パラメータの置換: $1,$2'
         }
     }
 }
@@ -74,12 +77,22 @@ describe('I18n plugin tests', () => {
             })
         })
 
+        it('test empty key message', () => {
+            expect(plugin.t('')).toEqual('')
+        })
+
         it('test message', () => {
             expect(plugin.t('message.hello')).toEqual('hello world')
         })
 
         it('test message function', () => {
             expect(plugin.t('message.param', 'world')).toEqual('hello world')
+        })
+
+        it('test $n replacement', () => {
+            expect(plugin.t('message.$n', 'param1', 'param2')).toEqual(
+                'replacement params: param1,param2'
+            )
         })
 
         it('test message without key', () => {

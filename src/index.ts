@@ -20,7 +20,7 @@ export function createI18n(options?: I18nOptions): I18nInstance {
     locales = initOptions.messages
     return {
         currentLocale: readonly(currentLocale),
-        t(key: string | string[], ...args: any): string {
+        t(key: string | string[], ...args: any[]): string {
             if (!key) return ''
             const locale = currentLocale.value
             let message: any
@@ -35,6 +35,12 @@ export function createI18n(options?: I18nOptions): I18nInstance {
             }
             if (typeof message === 'function') {
                 return message(...args) || key
+            }
+            if (args.length && message) {
+                args.forEach((value: string | number, index: number) => {
+                    const regexp = new RegExp(`\\$${index + 1}`, 'gi')
+                    message = message.replace(regexp, value)
+                })
             }
             return message || key
         },
