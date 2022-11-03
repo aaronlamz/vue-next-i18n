@@ -8,6 +8,10 @@
   <p>Key Array： {{ $t(['简体', '繁体', '英文']) }}</p>
   <p>Key [global option]： {{ $t('global') }}</p>
   <p>
+    Key [support $n]：
+    {{ $t('support $n', 'param1', 'param2', 'param3', 'param4') }}
+  </p>
+  <p>
     <button @click="swtchLang('en')">Change Lang to en</button>
   </p>
   <p>
@@ -53,19 +57,22 @@ export default {
       button: {
         add: 'i18nOption Add new'
       },
-      params: (val: string) => `en i18n Option params: ${val}`
+      params: (val: string) => `en i18n Option params: ${val}`,
+      'support $n': 'support $params: $1, $2, $3, $4'
     },
     zhCHS: {
       button: {
         add: 'i18n选项 新增'
       },
-      params: (val: string) => `简体 i18n选项 参数: ${val}`
+      params: (val: string) => `简体 i18n选项 参数: ${val}`,
+      'support $n': '支持参数 $params: $1, $2, $3, $4'
     },
     zhCHT: {
       button: {
         add: 'i18n选项 新增繁体'
       },
-      params: (val: string) => `繁体 i18n选项 参数: ${val}`
+      params: (val: string) => `繁体 i18n选项 参数: ${val}`,
+      'support $n': '支持參數 $params: $1, $2, $3, $4'
     }
   },
   setup() {

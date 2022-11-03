@@ -36,6 +36,12 @@ export function createI18n(options?: I18nOptions): I18nInstance {
             if (typeof message === 'function') {
                 return message(...args) || key
             }
+            if (args.length && message) {
+                args.forEach((value, index) => {
+                    const regexp = new RegExp(`\\$${index + 1}`, 'gi')
+                    message = message.replace(regexp, value)
+                })
+            }
             return message || key
         },
         changeLocale(locale: string) {
