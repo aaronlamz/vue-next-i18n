@@ -37,7 +37,7 @@ export function createI18n(options?: I18nOptions): I18nInstance {
                 return message(...args) || key
             }
             if (args.length && message) {
-                args.forEach((value, index) => {
+                args.forEach((value: string | number, index: number) => {
                     const regexp = new RegExp(`\\$${index + 1}`, 'gi')
                     message = message.replace(regexp, value)
                 })
