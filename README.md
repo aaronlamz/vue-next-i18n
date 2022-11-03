@@ -130,7 +130,7 @@ const messages = {
 </div>
 ```
 
-### support function translation
+### support function
 ```
 const messages = {
   en: {
@@ -154,6 +154,34 @@ const messages = {
   <p>{{ $t("message.hello",'hahaha') }}</p>
 </div>
 ```
+### support $n replacement
+Inserts the n th (1-indexed) available
+```
+const messages = {
+  en: {
+    message: {
+      hello: `hello world $1,$2,$3...`
+    }
+  },
+  zhCHS: {
+    message: {
+      hello: `你好 世界 $1,$2,$3...`
+    }
+  },
+  ja: {
+    message: {
+      hello:`こんにちは、世界 $1,$2,$3...`
+    }
+  }
+}
+
+// output: hello world param1,param2,param3
+<div id="app">
+  <p>{{ $t("message.hello",'param1','param2','param3') }}</p>
+</div>
+
+```
+
 ### use array messages
 The array order depends on the localeKeys, default value is ['zhCHS','zhCHT','en']
 
