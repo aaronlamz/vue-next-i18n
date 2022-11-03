@@ -7,9 +7,11 @@
   <p>Key[params]： {{ $t('params', param) }}</p>
   <p>Key Array： {{ $t(['简体', '繁体', '英文']) }}</p>
   <p>Key [global option]： {{ $t('global') }}</p>
+  <p>Key [empty]： {{ $t('') }}</p>
   <p>
-    Key [support $n]：
-    {{ $t('support $n', 'param1', 'param2', 'param3', 'param4') }}
+    Key [support $n]：{{
+      $t('support $n', 'param1', 'param2', 'param3', 'param4')
+    }}
   </p>
   <p>
     <button @click="swtchLang('en')">Change Lang to en</button>
