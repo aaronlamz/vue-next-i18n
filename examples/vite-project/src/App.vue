@@ -13,6 +13,7 @@
       $t('support $n', 'param1', 'param2', 'param3', 'param4')
     }}
   </p>
+  <p>key: {{ key }}</p>
   <p>
     <button @click="swtchLang('en')">Change Lang to en</button>
   </p>
@@ -50,7 +51,7 @@
   </p>
 </template>
 <script  lang="ts">
-import { useI18n } from '../../../src/index'
+import { useI18n, $t } from '../../../src/index'
 import { fromMapTips } from './map'
 import { ref } from 'vue'
 export default {
@@ -86,7 +87,9 @@ export default {
     }
     console.log(fromMapTips)
     let tips = ref(fromMapTips)
+    const key = ref($t('fromMapTips'))
     return {
+      key,
       param,
       currentLocale,
       tips,
