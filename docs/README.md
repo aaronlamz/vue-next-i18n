@@ -13,6 +13,6 @@ features:
 - title: Lightweight
   details: The plugin gzip size is less than 2kb
 - title: Powerful
-  details: n addition to simple translation, support localization such as function,$n replacement... etc
+  details: In addition to simple translation, support localization such as function,$n replacement... etc
 footer: MIT Licensed | Copyright © 2022-present Aaron Lam
 ---
