@@ -20,22 +20,10 @@ export default defineUserConfig({
             text: 'Introduction',
             collapsible:false,
             children: [
-              '/md/guide/basic/node-intro.md',
-              '/md/guide/basic/basic-principle.md',
-              '/md/guide/basic/module-mechanism.md',
+              '/md/guide/',
             ],
-          },
-          {
-            text: 'API',
-            collapsible:false,
-            children: [
-              '/md/guide/system-module/globals.md',
-              '/md/guide/system-module/fs.md',
-              '/md/guide/system-module/buffer.md',
-            ],
-          },
+          }
         ],
-
       }
     }),
 })
