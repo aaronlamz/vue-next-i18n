@@ -16,7 +16,7 @@ git init
 git branch -m master main
 git config --global init.defaultBranch main
 git config --global user.email "qylinxia@qq.com"
-git config --global user.name "Aaronlamz"
+git config --global user.name "aaronlamz"
 git add .
 git commit -m 'deploy'
 git status
