@@ -3,8 +3,8 @@
 # 确保脚本抛出遇到的错误
 set -e
 
-# 生成静态文件
-npm install -D vuepress@next
+# 生成静态文件 fix Conflicting peer dependency
+npm i --legacy-peer-deps
 npm run docs:build
 
 # 进入生成的文件夹
