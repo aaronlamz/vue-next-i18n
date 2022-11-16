@@ -4,7 +4,7 @@ heroImage: /vue-i18n-logo.svg
 heroText: Vue Next I18n
 tagline: Lightweight internationalization plugin of Vue.js 3
 actions:
-  - text: 开始 →
+  - text: Get Started →
     link: /md/guide/basic/node-intro
     type: primary
 features:

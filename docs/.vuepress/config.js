@@ -11,8 +11,8 @@ export default defineUserConfig({
       displayAllHeaders:true,
       logo: '/vue-i18n-logo.svg',
       navbar:  [
-          { text: '首页', link: '/' },
-          { text: '仓库', link: 'https://github.com/aaronlamz/vue-next-i18n' },
+          { text: 'Guide', link: '/md/guide/' },
+          { text: 'View on Github', link: 'https://github.com/aaronlamz/vue-next-i18n' },
       ],
       sidebar: {
           '/md/guide/': [
