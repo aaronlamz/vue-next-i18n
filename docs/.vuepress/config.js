@@ -6,7 +6,7 @@ export default defineUserConfig({
     title: 'Vue Next I18n',
     description: 'Lightweight internationalization plugin for @vuejs 3',
     base:'/vue-next-i18n/',
-    head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
+    head: [['link', { rel: 'icon', href: '/vue-next-i18n/favicon.ico' }]],
     theme: defaultTheme({
       displayAllHeaders:true,
       logo: '/vue-i18n-logo.svg',
