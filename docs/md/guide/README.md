@@ -9,11 +9,6 @@
 <img alt="npm" src="https://img.shields.io/npm/v/vue-next-i18n">
 </p>
 
-<p>
- <a href="./README.zh-CN.md">🇨🇳 中文文档</a> 
-</p>
-Lightweight internationalization plugin for Vue 3
-
 ## 🌈 Getting started
 To begin, you'll need to install vue-next-i18n 
 
@@ -222,11 +217,4 @@ export default {
   <p>{{ $t('message.hello') }}</p>
 </div>
 ```
-
-## 📜 Changelog
-Details changes for each release are documented in the [CHANGELOG.md](./CHANGELOG.md).
-
-## ©️ License
-MIT License © 2022 [Aaron Lam](https://github.com/aaronlamz)
-
 
