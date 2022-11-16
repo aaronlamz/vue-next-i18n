@@ -2,9 +2,9 @@ import { defineUserConfig } from 'vuepress'
 import { defaultTheme } from '@vuepress/theme-default'
 
 export default defineUserConfig({
-    lang: 'zh-CN',
+    lang: 'en',
     title: 'Vue Next I18n',
-    description: 'Vue Next I18n is internationalization plugin of Vue.js',
+    description: 'Lightweight internationalization plugin for @vuejs 3',
     base:'/vue-next-i18n/',
     head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
     theme: defaultTheme({
@@ -17,7 +17,7 @@ export default defineUserConfig({
       sidebar: {
           '/md/guide/': [
           {
-            text: '基础入门',
+            text: 'Introduction',
             collapsible:false,
             children: [
               '/md/guide/basic/node-intro.md',
@@ -26,7 +26,7 @@ export default defineUserConfig({
             ],
           },
           {
-            text: '系统模块',
+            text: 'API',
             collapsible:false,
             children: [
               '/md/guide/system-module/globals.md',
