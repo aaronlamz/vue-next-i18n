@@ -30,8 +30,8 @@ jobs:
             ssh-agent -a $SSH_AUTH_SOCK > /dev/null
             ssh-add - <<< "${{ secrets.SSH_PRIVATE_KEY }}"
 
-      - name: Run deploy.sh script
+      - name: Run docs-deploy.sh script
         env:
             SSH_AUTH_SOCK: /tmp/ssh_agent.sock
         run: |
-          sh deploy.sh
+          sh docs-deploy.sh
