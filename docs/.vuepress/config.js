@@ -3,13 +3,13 @@ import { defaultTheme } from '@vuepress/theme-default'
 
 export default defineUserConfig({
     lang: 'zh-CN',
-    title: 'Node.js 学习指南',
-    description: '构建 Node.js 知识体系',
+    title: 'Vue Next I18n',
+    description: 'Vue Next I18n is internationalization plugin of Vue.js',
     base:'/vue-next-i18n/',
     head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
     theme: defaultTheme({
       displayAllHeaders:true,
-      logo: '/nodejs.svg',
+      logo: '/vue-i18n-logo.svg',
       navbar:  [
           { text: '首页', link: '/' },
           { text: '仓库', link: 'https://github.com/aaronlamz/vue-next-i18n' },

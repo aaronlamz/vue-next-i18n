@@ -1,10 +1,10 @@
 ---
 home: true
 heroImage: /hero.png
-heroText: Node.js 学习指南
-tagline: 构建 Node.js 知识体系
+heroText: Vue Next I18n
+tagline: Vue.js 3 轻量级国际化插件
 actions:
-  - text: 开始学习 →
+  - text: 开始 →
     link: /md/guide/basic/node-intro
     type: primary
 features:
