@@ -12,6 +12,7 @@ export default defineUserConfig({
       logo: '/vue-i18n-logo.svg',
       navbar:  [
           { text: 'Guide', link: '/md/guide/' },
+          { text: 'Changelog', link: 'https://github.com/aaronlamz/vue-next-i18n/blob/main/CHANGELOG.md' },
           { text: 'View on Github', link: 'https://github.com/aaronlamz/vue-next-i18n' },
       ],
       sidebar: {
