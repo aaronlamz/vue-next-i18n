@@ -13,7 +13,7 @@ export default defineUserConfig({
       navbar:  [
           { text: 'Guide', link: '/md/guide/' },
           { text: 'Changelog', link: 'https://github.com/aaronlamz/vue-next-i18n/blob/main/CHANGELOG.md' },
-          { text: 'View on Github', link: 'https://github.com/aaronlamz/vue-next-i18n' },
+          { text: 'Github', link: 'https://github.com/aaronlamz/vue-next-i18n' },
       ],
       sidebar: {
           '/md/guide/': [
