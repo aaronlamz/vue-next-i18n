@@ -24,7 +24,7 @@ Details changes for each release are documented in the [CHANGELOG.md](./CHANGELO
 | excel-to-json-parser  | [https://github.com/aaronlamz/excel-to-json](https://github.com/aaronlamz/excel-to-json)
 
 ## ©️ License
-MIT License © 2022 [Aaron Lam](https://github.com/aaronlamz)
+MIT License © [Aaron Lam](https://github.com/aaronlamz)
 
 
 
