@@ -14,8 +14,14 @@ Lightweight internationalization plugin for Vue 3
 
 ## 🌈 Documentation
 [https://aaronlamz.github.io/vue-next-i18n](https://aaronlamz.github.io/vue-next-i18n)
+
 ## 📜 Changelog
 Details changes for each release are documented in the [CHANGELOG.md](./CHANGELOG.md).
+
+## 📦 Other Projects
+| Project  | Repo |
+| -------  | ---- |
+| excel-to-json  | [https://github.com/aaronlamz/excel-to-json](https://github.com/aaronlamz/excel-to-json)
 
 ## ©️ License
 MIT License © 2022 [Aaron Lam](https://github.com/aaronlamz)
