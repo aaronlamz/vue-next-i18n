@@ -8,7 +8,7 @@ export default defineUserConfig({
     base:'/vue-next-i18n/',
     head: [['link', { rel: 'icon', href: '/vue-next-i18n/favicon.ico' }]],
     theme: defaultTheme({
-      displayAllHeaders:true,
+      displayAllHeaders: true,
       logo: '/vue-i18n-logo.svg',
       navbar:  [
           { text: 'Guide', link: '/md/guide/' },
