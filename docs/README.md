@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /vue-i18n-logo.svg
+heroImage: /vue-i18n-logo.jpeg
 heroText: Vue Next I18n
 tagline: Lightweight internationalization plugin of Vue.js 3
 actions:
