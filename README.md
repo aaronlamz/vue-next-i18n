@@ -13,7 +13,7 @@
 Lightweight internationalization plugin for Vue 3
 
 ## 🌈 Documentation
-[https://aaronlamz.github.io/vue-next-i18n](https://aaronlamz.github.io/vue-next-i18n)
+[https://www.ultimate-kernel.fun/vue-next-i18n](https://www.ultimate-kernel.fun/vue-next-i18n)
 
 ## 📜 Changelog
 Details changes for each release are documented in the [CHANGELOG.md](./CHANGELOG.md).
