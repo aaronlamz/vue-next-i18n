@@ -13,8 +13,7 @@ export function getMessage(
     messageObject: LocaleMessageObject,
     path: string
 ): any {
-    if (!isObj(messageObject)) return ''
-    const keys = path.split('.')
+    const keys = path ? path.split('.') : []
     if (keys.length === 0) {
         return ''
     }
@@ -29,18 +28,18 @@ export function mergeDeep(
     target: Record<string, any>,
     source: Record<string, any>
 ): Record<string, any> {
+    const result: Record<string, any> = { ...target }
     Object.keys(source).forEach(key => {
-        // merging the same key on both objects
+        const targetValue = target[key]
+        const sourceValue = source[key]
         if (
-            typeof source[key] === 'object' &&
-            source[key] instanceof Object &&
-            key in target
+            typeof targetValue === 'object' &&
+            typeof sourceValue === 'object'
         ) {
-            source[key] = {
-                ...source[key],
-                ...mergeDeep(target[key], source[key])
-            }
+            result[key] = mergeDeep(targetValue, sourceValue)
+        } else {
+            result[key] = sourceValue
         }
     })
-    return { ...(target || {}), ...source }
+    return result
 }
