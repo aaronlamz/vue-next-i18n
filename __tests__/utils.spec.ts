@@ -77,32 +77,6 @@ describe('mergeDeep', () => {
         expect(mergeDeep(target, source)).toEqual(expected)
     })
 
-    // test('merges two objects with arrays', () => {
-    //     const target = { a: [1, 2, 3] }
-    //     const source = { a: [4, 5] }
-    //     const expected = { a: [4, 5, 3] }
-    //     expect(mergeDeep(target, source)).toEqual(expected)
-    // })
-
-    // test('returns target if source is null or undefined', () => {
-    //     const target = { a: { b: 1 } }
-    //     expect(mergeDeep(target, null)).toEqual(target)
-    //     expect(mergeDeep(target, undefined)).toEqual(target)
-    // })
-
-    // test('returns source if target is null or undefined', () => {
-    //     const source = { a: { b: 1 } }
-    //     expect(mergeDeep(null, source)).toEqual(source)
-    //     expect(mergeDeep(undefined, source)).toEqual(source)
-    // })
-
-    // test('returns empty object if both target and source are null or undefined', () => {
-    //     expect(mergeDeep(null, null)).toEqual({})
-    //     expect(mergeDeep(null, undefined)).toEqual({})
-    //     expect(mergeDeep(undefined, null)).toEqual({})
-    //     expect(mergeDeep(undefined, undefined)).toEqual({})
-    // })
-
     test('does not modify target or source objects', () => {
         const target = { a: { b: 1 } }
         const source = { a: { c: 2 } }
