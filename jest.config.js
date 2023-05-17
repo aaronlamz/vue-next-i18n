@@ -23,7 +23,7 @@ module.exports = {
     watchPathIgnorePatterns: ['<rootDir>/node_modules'],
     testEnvironment: 'jsdom',
     transform: {
-        '^.+\\.vue$': 'vue-jest',
+        '^.+\\.vue$': '@vue/vue3-jest',
         '^.+\\js$': 'babel-jest'
     },
     moduleFileExtensions: ['vue', 'js', 'json', 'jsx', 'ts', 'tsx', 'node']
