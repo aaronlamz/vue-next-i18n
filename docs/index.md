@@ -3,9 +3,9 @@
 layout: home
 
 hero:
-  name: "Vue next i18n"
+  name: "Vue Next I18n"
   text: "Internationalization plugin for Vue.js"
-  tagline: Easy, Lightweight, Vue.js 3
+  tagline: Easy, Lightweight, Gzip size 1KB
   actions:
     - theme: brand
       text: Markdown Examples
