@@ -1,85 +1,86 @@
 {
-    "name": "vue-next-i18n",
-    "version": "1.0.14",
-    "description": "Lightweight internationalization plugin for Vue 3",
-    "main": "dist/vue-next-i18n.cjs.js",
-    "scripts": {
-        "dev": "yarn && cd examples/vite-project && yarn && yarn dev",
-        "build": "rollup -c rollup.config.js",
-        "build:dts": "api-extractor run --local --verbose && tail -n +2 src/types.ts >> dist/vue-next-i18n.d.ts",
-        "release": "yarn build && yarn build:dts",
-        "changelog": "standard-version",
-        "test": "jest --coverage",
-        "docs:dev": "vuepress dev docs",
-        "docs:build": "vuepress build docs"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/Aaronlamz/vue-next-i18n.git"
-    },
-    "keywords": [
-        "vue",
-        "vue-next",
-        "i18n",
-        "vue-i18n",
-        "vue-next-i18n"
+  "name": "vue-next-i18n",
+  "version": "1.0.14",
+  "description": "Lightweight internationalization plugin for Vue 3",
+  "main": "dist/vue-next-i18n.cjs.js",
+  "scripts": {
+    "dev": "yarn && cd examples/vite-project && yarn && yarn dev",
+    "build": "rollup -c rollup.config.js",
+    "build:dts": "api-extractor run --local --verbose && tail -n +2 src/types.ts >> dist/vue-next-i18n.d.ts",
+    "release": "yarn build && yarn build:dts",
+    "changelog": "standard-version",
+    "test": "jest --coverage",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aaronlamz/vue-next-i18n.git"
+  },
+  "keywords": [
+    "vue",
+    "vue-next",
+    "i18n",
+    "vue-i18n",
+    "vue-next-i18n"
+  ],
+  "author": {
+    "name": "Aaron Lam",
+    "email": "linjiajun2015@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Aaronlamz/vue-next-i18n/issues"
+  },
+  "homepage": "https://github.com/Aaronlamz/vue-next-i18n#readme",
+  "files": [
+    "dist/*.js",
+    "dist/vue-next-i18n.d.ts",
+    "README.md"
+  ],
+  "types": "dist/vue-next-i18n.d.ts",
+  "devDependencies": {
+    "@microsoft/api-extractor": "^7.19.4",
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-node-resolve": "^13.1.3",
+    "@rollup/plugin-replace": "^3.0.1",
+    "@types/jest": "^28.1.8",
+    "@typescript-eslint/eslint-plugin": "^5.11.0",
+    "@typescript-eslint/parser": "^5.11.0",
+    "@vue/test-utils": "^2.0.2",
+    "@vue/vue3-jest": "^28.1.0",
+    "chalk": "^5.0.0",
+    "coveralls": "^3.1.1",
+    "eslint": "^8.8.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^8.4.1",
+    "jest": "^28.1.1",
+    "jest-environment-jsdom": "^28.1.1",
+    "lint-staged": "^12.3.3",
+    "prettier": "^2.5.1",
+    "rollup": "^2.67.1",
+    "rollup-plugin-typescript2": "^0.31.2",
+    "standard-version": "^9.3.2",
+    "ts-jest": "^28.0.5",
+    "typescript": "^4.5.5",
+    "vitepress": "^1.0.0-alpha.75",
+    "vue": "^3.2.31",
+    "vuepress": "2.0.0-beta.53"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write"
     ],
-    "author": {
-        "name": "Aaron Lam",
-        "email": "linjiajun2015@gmail.com"
-    },
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/Aaronlamz/vue-next-i18n/issues"
-    },
-    "homepage": "https://github.com/Aaronlamz/vue-next-i18n#readme",
-    "files": [
-        "dist/*.js",
-        "dist/vue-next-i18n.d.ts",
-        "README.md"
-    ],
-    "types": "dist/vue-next-i18n.d.ts",
-    "devDependencies": {
-        "@microsoft/api-extractor": "^7.19.4",
-        "@rollup/plugin-commonjs": "^21.0.1",
-        "@rollup/plugin-node-resolve": "^13.1.3",
-        "@rollup/plugin-replace": "^3.0.1",
-        "@types/jest": "^28.1.8",
-        "@typescript-eslint/eslint-plugin": "^5.11.0",
-        "@typescript-eslint/parser": "^5.11.0",
-        "@vue/test-utils": "^2.0.2",
-        "@vue/vue3-jest": "^28.1.0",
-        "chalk": "^5.0.0",
-        "coveralls": "^3.1.1",
-        "eslint": "^8.8.0",
-        "eslint-config-prettier": "^8.3.0",
-        "eslint-plugin-prettier": "^4.0.0",
-        "eslint-plugin-vue": "^8.4.1",
-        "jest": "^28.1.1",
-        "jest-environment-jsdom": "^28.1.1",
-        "lint-staged": "^12.3.3",
-        "prettier": "^2.5.1",
-        "rollup": "^2.67.1",
-        "rollup-plugin-typescript2": "^0.31.2",
-        "standard-version": "^9.3.2",
-        "ts-jest": "^28.0.5",
-        "typescript": "^4.5.5",
-        "vitepress": "^1.0.0-alpha.75",
-        "vue": "^3.2.31",
-        "vuepress": "2.0.0-beta.53"
-    },
-    "gitHooks": {
-        "pre-commit": "lint-staged"
-    },
-    "lint-staged": {
-        "*.js": [
-            "prettier --write"
-        ],
-        "*.ts?(x)": [
-            "prettier --parser=typescript --write"
-        ]
-    },
-    "peerDependencies": {
-        "vue": "^3.2.31"
-    }
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "peerDependencies": {
+    "vue": "^3.2.31"
+  }
 }
