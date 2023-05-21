@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Aaronlamz/vue-next-i18n.git"
+    "url": "git+https://github.com/aaronlamz/vue-next-i18n.git"
   },
   "keywords": [
     "vue",
@@ -27,13 +27,13 @@
   ],
   "author": {
     "name": "Aaron Lam",
-    "email": "linjiajun2015@gmail.com"
+    "email": "aaronlamz2022@gmail.com"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Aaronlamz/vue-next-i18n/issues"
+    "url": "https://github.com/aaronlamz/vue-next-i18n/issues"
   },
-  "homepage": "https://github.com/Aaronlamz/vue-next-i18n#readme",
+  "homepage": "https://github.com/aaronlamz/vue-next-i18n#readme",
   "files": [
     "dist/*.js",
     "dist/vue-next-i18n.d.ts",

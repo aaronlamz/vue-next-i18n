@@ -3,23 +3,26 @@
 layout: home
 
 hero:
-  name: "Vue Next I18n"
-  text: "Internationalization plugin for Vue.js"
-  tagline: Easy, Lightweight, Gzip size 1KB
+  name: "Vue next i18n"
+  text: "Lightweight i18n plugin for Vue.js 3"
+  tagline: Easy, Powerful, Lightweight 
+  image:
+    src: /logo.svg
+    alt: vue-next-i18n logo
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: Get Started
+      link: /en/guide/
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: View on GitHub
+      link: https://github.com/aaronlamz/vue-next-i18n
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Easy
+    details: You can introduce internationalization into your app with simple API
+  - title: Powerful
+    details: Support for array, function, regexp parameters
+  - title: Lightweight
+    details: Gzip size 1kb
 ---
 
