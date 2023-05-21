@@ -8,7 +8,7 @@ export default defineConfig({
         root: {
             label: 'English',
             lang: 'en',
-            link: '/',
+            link: '/en/',
             themeConfig: {
                 // https://vitepress.dev/reference/default-theme-config
                 logo: '/logo.svg',
@@ -40,7 +40,7 @@ export default defineConfig({
                 logo: '/logo.svg',
                 nav: [
                     { text: 'Home', link: '/' },
-                    { text: 'Guide', link: '/en/guide/' }
+                    { text: 'Guide', link: '/zh_CN/guide/' }
                 ],
                 sidebar: [
                     {
