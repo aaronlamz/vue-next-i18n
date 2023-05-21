@@ -4,6 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
     title: "Vue next i18n",
     description: "Lightweight internationalization plugin for Vue 3",
+    lang : 'en',
     locales: {
         root: {
             label: 'English',
@@ -13,15 +14,14 @@ export default defineConfig({
                 // https://vitepress.dev/reference/default-theme-config
                 logo: '/logo.svg',
                 nav: [
-                    { text: 'Home', link: '/' },
-                    { text: 'Guide', link: '/es/guide/' }
+                    { text: 'Home', link: '/en/' },
+                    { text: 'Guide', link: '/en/guide/' }
                 ],
                 sidebar: [
                     {
-                        text: 'Examples',
+                        text: 'Introduction',
                         items: [
-                            { text: 'Markdown Examples', link: '/markdown-examples' },
-                            { text: 'Runtime API Examples', link: '/api-examples' }
+                            { text: 'Guide', link: '/en/guide/' },
                         ]
                     }
                 ],
@@ -39,15 +39,14 @@ export default defineConfig({
                 // https://vitepress.dev/reference/default-theme-config
                 logo: '/logo.svg',
                 nav: [
-                    { text: 'Home', link: '/' },
-                    { text: 'Guide', link: '/zh_CN/guide/' }
+                    { text: '首页', link: '/zh_CN/' },
+                    { text: '指南', link: '/zh_CN/guide/' }
                 ],
                 sidebar: [
                     {
-                        text: 'Examples',
+                        text: '介绍',
                         items: [
-                            { text: 'Markdown Examples', link: '/markdown-examples' },
-                            { text: 'Runtime API Examples', link: '/api-examples' }
+                            { text: '指南', link: '/zh_CN/guide/' },
                         ]
                     }
                 ],
