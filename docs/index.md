@@ -7,7 +7,7 @@ hero:
   text: "Lightweight i18n plugin for Vue.js 3"
   tagline: Easy, Powerful, Lightweight 
   image:
-    src: /vue-next-i18n/logo.svg
+    src: /logo.svg
     alt: vue-next-i18n logo
   actions:
     - theme: brand
