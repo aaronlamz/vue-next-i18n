@@ -3,6 +3,7 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
     title: "Vue next i18n",
+    base: '/vue-i18n-next/',
     description: "Lightweight internationalization plugin for Vue 3",
     lang : 'en',
     locales: {
