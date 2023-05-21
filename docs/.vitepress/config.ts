@@ -10,23 +10,22 @@ export default defineConfig({
         root: {
             label: 'English',
             lang: 'en',
-            link: '/en/',
+            link: '/',
             themeConfig: {
                 // https://vitepress.dev/reference/default-theme-config
                 logo: '/logo.svg',
                 nav: [
-                    { text: 'Home', link: '/en/' },
-                    { text: 'Guide', link: '/en/guide/' }
+                    { text: 'Home', link: '/' },
+                    { text: 'Guide', link: '/guide/'}
                 ],
                 sidebar: [
                     {
                         text: 'Introduction',
                         items: [
-                            { text: 'Guide', link: '/en/guide/' },
+                            { text: 'Guide', link: '/guide/' },
                         ]
                     }
                 ],
-
                 socialLinks: [
                     { icon: 'github', link: 'https://github.com/aaronlamz/vue-next-i18n' }
                 ]
@@ -34,7 +33,7 @@ export default defineConfig({
         },
         zh_CN: {
             label: '简体中文',
-            lang: 'zh-CN',
+            lang: 'zh_CN',
             link: '/zh_CN/',
             themeConfig: {
                 // https://vitepress.dev/reference/default-theme-config
@@ -51,7 +50,6 @@ export default defineConfig({
                         ]
                     }
                 ],
-
                 socialLinks: [
                     { icon: 'github', link: 'https://github.com/aaronlamz/vue-next-i18n' }
                 ]
