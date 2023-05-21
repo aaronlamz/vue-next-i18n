@@ -7,7 +7,7 @@ hero:
   text: "轻量版 Vue 3 国际化插件"
   tagline: 简单，强大， 轻量
   image:
-    src: /logo.svg
+    src: /vue-next-i18n/logo.svg
     alt: vue-next-i18n logo
   actions:
     - theme: brand
