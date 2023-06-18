@@ -3,6 +3,9 @@
   "version": "1.0.14",
   "description": "Lightweight internationalization plugin for Vue 3",
   "main": "dist/vue-next-i18n.cjs.js",
+  "module": "dist/vue-next-i18n.esm-bundler.js",
+  "unpkg": "dist/vue-next-i18n.global.js",
+  "sideEffects": false,
   "scripts": {
     "dev": "yarn && cd examples/vite-project && yarn && yarn dev",
     "build": "rollup -c rollup.config.js",

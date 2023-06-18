@@ -19,7 +19,7 @@ export type I18nInstance = {
     currentLocale: UnwrapNestedRefs<Ref<string>>;
     changeLocale(locale: string): void;
     addLocales(messages: Locales): void;
-    t(key: string, options?: any): string;
+    t(key: string | string[], ...args: any[]): string;
     install(app: App): void;
 };
 
@@ -32,8 +32,10 @@ export type I18nOptions = {
     localeKeys?: string[];
 };
 
+// Warning: (ae-forgotten-export) The symbol "fn" needs to be exported by the entry point index.d.ts
+//
 // @public (undocumented)
-export type LocaleMessage = string;
+export type LocaleMessage = string | number | fn;
 
 // @public (undocumented)
 export type LocaleMessageObject = {

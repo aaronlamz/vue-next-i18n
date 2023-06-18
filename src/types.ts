@@ -8,6 +8,7 @@ export type I18nOptions = {
     }
     localeKeys?: string[]
 }
+
 type fn = (key: string) => string
 
 export type LocaleMessage = string | number | fn
@@ -30,4 +31,11 @@ export type I18nInstance = {
     addLocales(messages: Locales): void
     t(key: string | string[], ...args: any[]): string
     install(app: App): void
+}
+
+declare module '@vue/runtime-core' {
+    interface ComponentCustomProperties {
+        $i18n: I18nInstance
+        $t(key: string | string[], ...args: any[]): string
+    }
 }

@@ -1,8 +1,8 @@
 {
   "metadata": {
     "toolPackage": "@microsoft/api-extractor",
-    "toolVersion": "7.19.4",
-    "schemaVersion": 1004,
+    "toolVersion": "7.34.9",
+    "schemaVersion": 1011,
     "oldestForwardsCompatibleVersion": 1001,
     "tsdocConfig": {
       "$schema": "https://developer.microsoft.com/json-schemas/tsdoc/v0/tsdoc.schema.json",
@@ -156,18 +156,21 @@
         "@betaDocumentation": true,
         "@internalRemarks": true,
         "@preapproved": true
-      }
+      },
+      "reportUnsupportedHtmlElements": false
     }
   },
   "kind": "Package",
   "canonicalReference": "vue-next-i18n!",
   "docComment": "",
   "name": "vue-next-i18n",
+  "preserveMemberOrder": false,
   "members": [
     {
       "kind": "EntryPoint",
       "canonicalReference": "vue-next-i18n!",
       "name": "",
+      "preserveMemberOrder": false,
       "members": [
         {
           "kind": "Variable",
@@ -183,6 +186,8 @@
               "text": "any"
             }
           ],
+          "fileUrlPath": "src/index.ts",
+          "isReadonly": false,
           "releaseTag": "Public",
           "name": "$t",
           "variableTypeTokenRange": {
@@ -218,6 +223,7 @@
               "text": ";"
             }
           ],
+          "fileUrlPath": "src/index.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -230,7 +236,8 @@
               "parameterTypeTokenRange": {
                 "startIndex": 1,
                 "endIndex": 2
-              }
+              },
+              "isOptional": true
             }
           ],
           "name": "createI18n"
@@ -242,7 +249,7 @@
           "excerptTokens": [
             {
               "kind": "Content",
-              "text": "export declare type I18nInstance = "
+              "text": "export type I18nInstance = "
             },
             {
               "kind": "Content",
@@ -251,7 +258,7 @@
             {
               "kind": "Reference",
               "text": "UnwrapNestedRefs",
-              "canonicalReference": "!unknown"
+              "canonicalReference": "@vue/reactivity!UnwrapNestedRefs:type"
             },
             {
               "kind": "Content",
@@ -260,7 +267,7 @@
             {
               "kind": "Reference",
               "text": "Ref",
-              "canonicalReference": "!unknown"
+              "canonicalReference": "@vue/reactivity!Ref:interface"
             },
             {
               "kind": "Content",
@@ -273,12 +280,12 @@
             },
             {
               "kind": "Content",
-              "text": "): void;\n    t(key: string, options?: any): string;\n    install(app: "
+              "text": "): void;\n    t(key: string | string[], ...args: any[]): string;\n    install(app: "
             },
             {
               "kind": "Reference",
               "text": "App",
-              "canonicalReference": "!unknown"
+              "canonicalReference": "@vue/runtime-core!App:interface"
             },
             {
               "kind": "Content",
@@ -289,6 +296,7 @@
               "text": ";"
             }
           ],
+          "fileUrlPath": "src/types.ts",
           "releaseTag": "Public",
           "name": "I18nInstance",
           "typeTokenRange": {
@@ -303,7 +311,7 @@
           "excerptTokens": [
             {
               "kind": "Content",
-              "text": "export declare type I18nOptions = "
+              "text": "export type I18nOptions = "
             },
             {
               "kind": "Content",
@@ -323,6 +331,7 @@
               "text": ";"
             }
           ],
+          "fileUrlPath": "src/types.ts",
           "releaseTag": "Public",
           "name": "I18nOptions",
           "typeTokenRange": {
@@ -337,22 +346,28 @@
           "excerptTokens": [
             {
               "kind": "Content",
-              "text": "export declare type LocaleMessage = "
+              "text": "export type LocaleMessage = "
             },
             {
               "kind": "Content",
-              "text": "string"
+              "text": "string | number | "
+            },
+            {
+              "kind": "Reference",
+              "text": "fn",
+              "canonicalReference": "vue-next-i18n!~fn:type"
             },
             {
               "kind": "Content",
               "text": ";"
             }
           ],
+          "fileUrlPath": "src/types.ts",
           "releaseTag": "Public",
           "name": "LocaleMessage",
           "typeTokenRange": {
             "startIndex": 1,
-            "endIndex": 2
+            "endIndex": 3
           }
         },
         {
@@ -362,7 +377,7 @@
           "excerptTokens": [
             {
               "kind": "Content",
-              "text": "export declare type LocaleMessageObject = "
+              "text": "export type LocaleMessageObject = "
             },
             {
               "kind": "Content",
@@ -391,6 +406,7 @@
               "text": ";"
             }
           ],
+          "fileUrlPath": "src/types.ts",
           "releaseTag": "Public",
           "name": "LocaleMessageObject",
           "typeTokenRange": {
@@ -405,7 +421,7 @@
           "excerptTokens": [
             {
               "kind": "Content",
-              "text": "export declare type LocaleMessages = "
+              "text": "export type LocaleMessages = "
             },
             {
               "kind": "Content",
@@ -434,6 +450,7 @@
               "text": ";"
             }
           ],
+          "fileUrlPath": "src/types.ts",
           "releaseTag": "Public",
           "name": "LocaleMessages",
           "typeTokenRange": {
@@ -448,12 +465,12 @@
           "excerptTokens": [
             {
               "kind": "Content",
-              "text": "export declare type Locales = "
+              "text": "export type Locales = "
             },
             {
               "kind": "Reference",
               "text": "UnwrapNestedRefs",
-              "canonicalReference": "!unknown"
+              "canonicalReference": "@vue/reactivity!UnwrapNestedRefs:type"
             },
             {
               "kind": "Content",
@@ -473,6 +490,7 @@
               "text": ";"
             }
           ],
+          "fileUrlPath": "src/types.ts",
           "releaseTag": "Public",
           "name": "Locales",
           "typeTokenRange": {
@@ -499,6 +517,7 @@
               "text": ";"
             }
           ],
+          "fileUrlPath": "src/useApi.ts",
           "returnTypeTokenRange": {
             "startIndex": 1,
             "endIndex": 2
