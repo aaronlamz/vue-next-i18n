@@ -24,6 +24,10 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+    - name: git pull
+      run: |
+        git reset --hard
+        git pull
     - name: npm run build
       run: |
         npm install
@@ -31,7 +35,7 @@ jobs:
     - name: npm publish
       run: |
         git config --local user.email "qylinxia@qq.com"
-        git config --local user.name "Aaronlamz"
+        git config --local user.name "aaronlamz"
         npm config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN
         git stash
         npm version patch
