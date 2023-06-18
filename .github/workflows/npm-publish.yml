@@ -37,9 +37,10 @@ jobs:
         git config --local user.email "qylinxia@qq.com"
         git config --local user.name "aaronlamz"
         npm config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN
-        git stash
-        npm version patch
-        git stash pop
+        # git stash
+        # npm version patch
+        # git stash pop
+        git status
         git push --follow-tags 
         npm publish
       env:
