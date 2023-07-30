@@ -5,7 +5,7 @@ export default defineConfig({
     title: "Vue next i18n",
     base: '/vue-next-i18n/',
     description: "Lightweight internationalization plugin for Vue 3",
-    lang : 'en',
+    lang: 'en',
     locales: {
         root: {
             label: 'English',
@@ -16,7 +16,7 @@ export default defineConfig({
                 logo: '/logo.svg',
                 nav: [
                     { text: 'Home', link: '/' },
-                    { text: 'Guide', link: '/en/guide/'}
+                    { text: 'Guide', link: '/guide/' }
                 ],
                 sidebar: [
                     {
