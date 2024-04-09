@@ -2,7 +2,6 @@
 
 <p align="center">
  <img src="https://github.com/Aaronlamz/vue-next-i18n/actions/workflows/npm-publish.yml/badge.svg?branch=main">
- <img src="https://img.badgesize.io/https://unpkg.com/vue-next-i18n/dist/vue-next-i18n.cjs.js?compression=gzip&style=flat-square&label=gzip%20size&color=#4fc08d" alt="Gzip Size" />
  <a href="https://codecov.io/gh/aaronlamz/vue-next-i18n" > 
   <img src="https://codecov.io/gh/aaronlamz/vue-next-i18n/branch/main/graph/badge.svg?token=E9JG51QZAS"/> 
  </a>
